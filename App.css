@@ -1,0 +1,69 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to right,#11AAFF,#11FFAA)
+}
+
+.maingrid{
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  border-radius: 16px;
+  grid-template-columns: repeat(4,6rem);
+  grid-template-rows: minmax(7rem,auto) repeat(5,6rem);
+
+}
+
+ .maingrid> button {
+  cursor:pointer;
+  font-size: 2rem;
+  border: 1px solid rgb(255, 254, 254);
+  border-radius: 16px;
+  outline: none;
+  background-color: rgba(250, 250, 250, 0.3);
+}
+
+
+.spanone :hover,.spanone :focus,.spanone:active {
+  box-shadow: 0 0 20px rgba(0, 0, 0,.50);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+
+  /* background-color :rgba(255,255,255 ,.95); */
+}
+.spantwo :hover,.spantwo :focus,.spantwo:active {
+  box-shadow: 0 0 20px rgba(0, 0, 0,.50);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+
+  /* background-color :rgba(255,255,255 ,.95); */
+}
+.spantwo{
+  grid-column: span 2;
+}
+
+.output{
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0,.50);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap:break-word;
+  word-break: break-all;
+}
+
+.previous{
+  color: rgba(255, 255, 255,.75);
+  font-size: 1.5rem;
+}
+
+.current{
+  color: white;
+  font-size: 2.5rem;
+}
